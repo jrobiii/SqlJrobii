@@ -20,7 +20,7 @@ declare @Databases table (DatabaseName sysname not null)
 insert into @Databases
     select name from sys.databases where database_id > 4
 
-declare @DatabaseName = (select min(DatabaseName) from @Databases)
+declare @DatabaseName sysname = (select min(DatabaseName) from @Databases)
 
 while (@DatabaseName is not null) begin
 

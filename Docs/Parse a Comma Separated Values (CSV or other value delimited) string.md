@@ -32,7 +32,7 @@ select * from @WordList
 
 ## Method Two
 
-This method comes from [[http://www.sqlteam.com/article/parsing-csv-values-into-multiple-rows#|Rob Volk at SQL Team]] (mondo cool). Here I have reformatted to suit my style and stuffed it in a Table Valued Function. I'm really starting to shine on this method as it is set based (not to mention rather clever)
+This method comes from ![Rob Volk at SQL Team](http://www.sqlteam.com/article/parsing-csv-values-into-multiple-rows#) (mondo cool). Here I have reformatted to suit my style and stuffed it in a Table Valued Function. I'm really starting to shine on this method as it is set based (not to mention rather clever)
 
 ```sql
 if (not exists (select 1 from sys.schemas where name = 'Utility')) begin
